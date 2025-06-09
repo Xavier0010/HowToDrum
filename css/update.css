@@ -1,0 +1,108 @@
+/** Bebas Neue **/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/** Nunito **/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left a img {
+    height: 2.5rem;
+    margin: 0 1rem;
+}
+
+.btn-logout {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    font-family: "Bebas Neue";
+    letter-spacing: 0.1rem;
+    margin: 0 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+main form {
+    padding: 40px;
+    border: none;
+    border-radius: 0.7rem;
+    box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.15);
+    max-width: fit-content;
+    font-family: 'Nunito';
+}
+
+main form h1 {
+    margin: 0;
+    font-family: 'Nunito';
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+main form label {
+    font-size: 0.7rem;
+    padding: 5px 0;
+}
+
+main form input, select {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 1.1rem;
+    font-family: 'Nunito';
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+main form input:focus, select:focus {
+    border-bottom: 2px solid rgba(0, 0, 0, 1);
+}
+
+main form .btn-submit {
+    font-size: 0.9rem;
+    margin-right: 10px;
+    font-family: nunito, sans-serif;
+    cursor: pointer;
+    padding: 10px 30px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 2rem;
+}
+
+main form .btn-cancel {
+    font-size: 0.9rem;
+    margin-right: 10px;
+    font-family: nunito, sans-serif;
+    cursor: pointer;
+    padding: 10px 30px;
+    color: #000;
+    background-color: #fff;
+    border-color: solid 2px #000;
+    border-radius: 2rem;
+}

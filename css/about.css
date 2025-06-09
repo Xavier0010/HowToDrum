@@ -1,0 +1,208 @@
+/** Bebas Neue **/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/** Raleway **/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #FFDBB5;
+    position: sticky;
+    top: 0;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 2.5rem;
+    margin-left: 0.7rem;     
+}
+
+.nav-items {
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-items a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 20px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5rem;
+}
+
+.nav-right {
+    margin: 0 15px;
+}
+
+.nav-right a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.nav-right .login-signup {
+    padding: 5px 10px;
+    margin: 3px;
+    border-radius: 0.9rem;
+    transition: all 0.15s linear;
+}
+
+.nav-right .login-signup:hover {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.nav-user img {
+    height: 2rem;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all .15s linear;
+}
+
+.nav-user img:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.squarespace-cdn.com/content/v1/5a4ab9b329f1876b4a37c3f5/1678199537788-47ZR4MMCIRCWRMMZ3Q8Y/unsplash-image-9lfubBqLbRc.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.header-text h1 {
+    font-family: 'Bebas Neue', serif;
+    font-size: 6rem;
+    margin: 0;
+}
+
+.header-text p {
+    font-family: 'Bebas Neue', serif;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.header-text p span {
+    color: #A4A4A4;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center; 
+    height: 80vh;
+}
+
+.about {
+    width: 20vw;
+    margin: 50px 0;
+    padding: 20px;
+    border: solid 1px #010101;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.socials-container {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 20px;
+    width: 25vw;
+    background-color: white;
+    border: solid 1px #010101;
+    border-radius: 5rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);    
+}
+
+.socials-container a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    transition: all .15s linear;
+}
+
+.socials-container a:hover {
+    transform: scale(1.1);
+}
+
+.socials-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    background-color: white;
+}
+
+.socials-img {
+    height: 50px;
+}
+
+.tiktok-section {
+    background-color: whitesmoke;
+}
+
+.instagram-section {
+    background-color: whitesmoke;
+}
+
+.whatsapp-section {
+    background-color: whitesmoke;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    background-color: #666666; 
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+}
+
+.footer-top a, h3 {
+    margin: 0 7px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer-separator {
+    width: 20%;
+    border-color: black;
+}

@@ -1,0 +1,741 @@
+/** Bebas Neue **/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/** Metal Mania **/
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+/** Pacifico **/
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/** Rock Salt **/
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+/** Gochi Hand **/
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+/** Nunito **/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    transition: top 0.8s ease;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.nav-logo img {
+    height: 2.5rem;
+    margin-left: 0.7rem;     
+}
+
+.nav-right {
+    gap: 1.2rem;
+    margin: 0 1rem;
+}
+
+.nav-right a {
+    color: #000;
+    text-decoration: none;
+    font-family: 'Nunito';
+    padding: 3px 0;
+}
+
+.nav-right .login-signup {
+    border-bottom: solid 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s linear;
+}
+
+.nav-right .login-signup:hover {
+    border-bottom: solid 2px rgba(0, 0, 0, 1);
+}
+
+.nav-user img {
+    height: 2rem;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: all .15s linear;
+}
+
+.nav-user img:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/HeaderHeroImg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.header-text h1 {
+    font-family: 'Bebas Neue';
+    font-size: 6rem;
+    margin: 0;
+}
+
+.header-text p {
+    font-family: nunito;
+    font-size: 1.3rem;
+    font-size: 200;
+    margin: 0;
+}
+
+.header-text p span {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+main {
+    font-family: 'Nunito';
+    font-size: 0.9rem;
+    margin: 3rem 0;
+}
+
+h3 {
+    font-family: 'Nunito';
+    font-size: 1.2rem;
+}
+
+p {
+    font-family: 'Nunito';
+    font-size: 1.1rem;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    margin: 3rem;
+}   
+
+.card {
+    flex: 1 1 45%;
+    height: fit-content;
+    box-shadow: 0 0 20px 4px rgba(0,0,0,0.15);
+    border-radius: 0.7rem;
+    text-align: center;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.card select {
+    width: 100%;
+    padding: 7px;
+    border-radius: 0.3rem;
+    border: solid 2px black;
+    text-align: center;
+    font-family: 'nunito';
+    font-size: 0.95rem;
+}
+
+.card-header {
+    position: relative;
+    text-align: center;
+}
+
+.card-header h2 {
+    font-size: 2rem;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.card-header button {
+    position: absolute;
+    border: none;
+    top: 60%;
+    right: 0;
+    padding: 0;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #000;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card-content {
+    margin: 20px 0;
+}
+
+.drum-history-content .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    gap: 50px;
+}
+
+.drum-history-content .row img {
+    width: 350px;
+    border-radius: 1rem;
+    margin: 0 100px;
+    transition: all .2s ease;
+}
+
+.drum-history-content .row img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px 4px rgba(0,0,0,0.15);
+}
+
+.drum-history-content .row p {
+    font-size: 1.2rem;
+    margin: 0 30px;
+}
+
+.drum-history-content .row1 p {
+    text-align: left;
+}
+
+.drum-history-content .row2 p {
+    text-align: right;
+}
+
+.technique-content img {
+    width: 350px;
+    border-radius: 1rem;
+}
+
+.technique-content p {
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+
+.drum-component-content {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.drum-component-content img {
+    width: auto;
+    height: 150px;
+    margin: 20px;
+}
+
+.drum-component-text {
+    text-align: center;
+    margin: 10px 15px;
+}
+
+.drum-component-text h3 {
+    margin: 7px 0;
+}
+
+.drum-component-text button {
+    background-color: #000;
+    border: none;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.drum-component-text button i {
+    color: #fff;
+    font-size: 1.2rem;
+    width: 10px;
+    height: 10px;
+}
+
+.notation-rest-content {
+    display: flex;
+    justify-content: center;
+}
+
+.notation-content, .rest-content {
+    margin: 20px 30px;
+}
+
+.notation-content img,
+.rest-content img {
+    margin: 0 auto;
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.tempo-content img {
+    width: 250px;
+}
+
+.metronome-card {
+    user-select: none;
+}
+
+input[type="range"] {
+    appearance: none;
+    width: 50%;
+    height: 2px;
+    background: #999;
+    border-radius: 1px;
+    outline: none;
+    margin-top: 25px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.1);
+}
+
+input[type="range"]::-moz-range-track {
+    height: 1px;
+    background: #000;
+}
+
+.tempo-setting {
+    display: flex;
+    justify-content: center;
+}
+
+.tempo-display .tempo {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.increase-tempo, .decrease-tempo {
+    display: flex;
+    gap: 15px;
+    margin: 0 10px;
+}
+
+.adjust-tempo-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.adjust-tempo-btn:hover {
+    transform: scale(1.1);
+}
+
+.tempo-slider {
+    background-color: transparent;
+    width: 60%;
+    margin: 0 7px;
+}
+
+.start-stop {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.3rem;
+    background: #000;
+    border-radius: 50%;
+    color: #fff;
+    padding-top: 2px;
+    padding-left: 2px;
+    line-height: 50px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.song-recommendation {
+    padding: 0 2.5rem;
+}
+
+.song-recommendation-container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 0.7rem;
+    box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.song-recommendation-container hr {
+    width: 100%;
+}
+
+.song-recommendation-container h2 {
+    font-size: 2rem;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.song-recommendation-content {
+    display: flex;
+}
+
+.song-list-container {
+    display: flex;
+    height: 300px; /* fixed height */
+    overflow-y: auto; /* enable vertical scrolling */
+    padding: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.song-list {
+    display: flex;
+    text-align: left;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 0.7rem;
+    padding: 20px;
+    transition: .1s linear;
+    cursor: initial;
+}
+
+.song-list:hover {
+    transform: scale(1.01);
+}
+
+.song-list img {
+    height: 85px;
+    border-radius: 0.3rem;
+    margin-right: 17px;
+}
+
+.song-list .song-details {
+    width: 225px;
+}
+
+.song-list .song-details h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.song-list .song-list-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.song-list .song-list-content p {
+    margin: 7px;
+}
+
+.song-list .song-list-content span {
+    font-size: 0.9rem;
+    max-width: fit-content;
+}
+
+.song-list .song-list-content ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    gap: 10px;
+    margin: 5px;
+}
+
+.song-list .song-list-content ul li {
+    padding: 10px;
+    font-size: 0.75rem;
+    border-radius: 2rem;
+    background-color: lightgray;
+}
+
+.song-list .song-list-content .redirect-links {
+    display: flex;
+    gap: 15px;
+    text-decoration: none;
+    margin: 7px;
+}
+
+.song-list .song-list-content .redirect-links a {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 0.6rem;
+}
+
+.song-list .song-list-content .redirect-links a img {
+    height: 30px;
+    margin-right: 1px;
+}
+
+.song-list .song-list-content .redirect-links a p {
+    font-weight: 700;
+    color: black;
+}
+
+.song-list .song-list-content .redirect-links .redirect-spotify {
+    background-color: #7ee8fa;
+    background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+}
+
+.song-list .song-list-content .redirect-links .redirect-youtube {
+    background-color: #ff0000;
+}
+
+.song-list .song-list-content .redirect-links .redirect-youtube p {
+    color: #fff;
+}
+
+.genre-carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 300px;
+    margin: 0 50px;
+    overflow: hidden;
+}
+
+.carousel-items {
+    display: flex;
+    overflow-x: hidden; /* hide scrollbar and prevent free scroll */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+}
+
+.carousel-items::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+.carousel-items #rock {
+    background-image: url("https://drummagazine.com/wp-content/uploads/2016/08/Jeff-Porcaro.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.carousel-items #metal {
+    background-image: url("https://i.guim.co.uk/img/media/82205102ddf545a61a156766271e012e17d00a6e/0_0_3000_1800/master/3000.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=0476b758ff8f73acc4f1d0b9bb829f80");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    font-family: "Metal Mania";
+    letter-spacing: 2px;
+}
+
+.carousel-items #jazz {
+    background-image: url("https://wrtcfm.com/wp-content/uploads/2021/10/BP.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    font-family: "Pacifico";
+    letter-spacing: 2px;
+}
+
+.carousel-items #punk {
+    background-image: url("https://drumspy.com/wp-content/uploads/2023/02/Travis-Barker.webp");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    font-family: "Rock Salt";
+    letter-spacing: 2px;
+}
+
+.carousel-items #reggae {
+    background-image: url("https://i.pinimg.com/736x/00/7b/8d/007b8d21bce6d88b83c37a1e22b59f75.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    font-family: "Gochi Hand";
+    letter-spacing: 2px;
+}
+
+.carousel-items #pop {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Josh_Devine_%E2%80%93_One_Direction_Up_All_Night_Tour.jpg/960px-Josh_Devine_%E2%80%93_One_Direction_Up_All_Night_Tour.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    font-family: "Nunito";
+    font-weight: 800;
+}   
+
+.genre-item {
+    flex: 0 0 auto;
+    min-width: 200px;
+    height: 200px;
+    margin: 7px;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.7rem;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: background-color 0.2s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.genre-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* darken background only */
+    border-radius: 0.7rem;
+    z-index: -1;
+}
+
+.carousel-arrow {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    padding: 10px;
+    user-select: none;
+    transition: color 0.2s linear;
+}
+
+.carousel-arrow:hover {
+    color: #fa545c;
+}
+
+.left-arrow {
+    margin-right: 5px;
+}
+
+.right-arrow {
+    margin-left: 5px;
+}
+
+.exercise-page-redirect {
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Nunito';
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 2.5rem;
+    border: none;
+    border-radius: 0.7rem;
+}
+
+.topic-description-overlay {
+    display: none; /* Hides the overlay by default */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.topic-description-overlay.active {
+    display: flex;
+}
+
+.overlay-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+.overlay-content h1 {
+    font-weight: 800;
+    font-size: 2.2rem;
+}
+
+.overlay-content p {
+    font-size: 1.2rem;
+}
+
+.close-overlay-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1002; /* Ensure this is above everything */
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    background-color: #666666; 
+}
+
+.footer-logo a {
+    display: flex;
+    align-items: center;
+    margin: 0 7px;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    color: #000;
+    gap: 10px;
+}
+
+.footer-logo a img {
+    width: 40px;
+}
+
+footer hr {
+    width: 20%;
+    border-color: black;
+}
