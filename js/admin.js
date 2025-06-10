@@ -16,7 +16,7 @@ function ConfirmTopicDeleteAlert(topicId) {
 
 function ConfirmExerciseDeleteAlert(exerciseId) {
     event.preventDefault();
-    var ConfirmText = confirm("Are you sure you want to remove this topic?");
+    var ConfirmText = confirm("Are you sure you want to remove this exercise?");
     if (ConfirmText == true) {
         window.location.href = "delete.php?exercise_Id=" + exerciseId;
     }

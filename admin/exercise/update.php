@@ -58,7 +58,7 @@
                     header("Location: ./");
                     exit;
                 } else {
-                    echo "Error updating topic: " . $conn->error;
+                    echo "Error updating exercise: " . $conn->error;
                 }
             }
         ?>

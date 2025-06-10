@@ -96,7 +96,6 @@ if ($result === false) {
             </a>
             <a href="../">Manage user</a>
             <a href="./">Manage topic</a>
-            <a href="./song_recommendation/">Manage song recommendation</a>
             <a href="../exercise/">Manage exercise</a>
         </div>
         <div class="nav-right">

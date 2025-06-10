@@ -3,6 +3,26 @@
 session_start();
 $isLoggedIn = isset($_SESSION['user']);
 include('../db.php');
+$isLoggedIn = isset($_SESSION['user']);
+
+if (!isset($_SESSION['user'])) {
+    header("Location: ../signin/");
+    exit;
+}
+
+$user = $_SESSION['user'];
+
+// Get current user data
+$userQuery = "SELECT * FROM user_table WHERE username = ?";
+$userStmt = $conn->prepare($userQuery);
+$userStmt->bind_param("s", $user);
+$userStmt->execute();
+$userResult = $userStmt->get_result();
+
+if ($userResult->num_rows === 0) {
+    header("Location: ../signin/");
+    exit;
+}
 
 ?>
 
