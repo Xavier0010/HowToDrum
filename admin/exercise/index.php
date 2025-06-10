@@ -1,5 +1,5 @@
 <?php
-include('../db.php');
+include('../../db.php');
 session_start();
 $isLoggedIn = isset($_SESSION['user']);
 
@@ -9,89 +9,19 @@ if (!isset($_SESSION['user'])) {
 }
 
 $user = $_SESSION['user'];
-
-// Get current user data
-$userQuery = "SELECT * FROM user_table WHERE username = ?";
-$userStmt = $conn->prepare($userQuery);
-$userStmt->bind_param("s", $user);
-$userStmt->execute();
-$userResult = $userStmt->get_result();
-
-if ($userResult->num_rows === 0) {
-    header("Location: ../");
-    exit;
-}
-
-$userData = $userResult->fetch_assoc();
-$status = $userData['status'];
-
-// Redirect if not admin
-if ($status !== 'admin') {
-    header("Location: ../");
-    exit;
-}
-
-$type = $_GET['type'] ?? '';
-$value = $_GET['value'] ?? '';
-
-$sql = "SELECT * FROM user_table";
-$params = [];
-$types = "";
-
-if (!empty($type) && !empty($value)) {
-    switch ($type) {
-        case 'user_id':
-            $sql .= " WHERE user_id = ?";
-            $params[] = (int)$value;
-            $types .= "i";
-            break;
-        case 'username':
-            $sql .= " WHERE username LIKE ?";
-            $params[] = "%$value%";
-            $types .= "s";
-            break;
-        case 'email':
-            $sql .= " WHERE email LIKE ?";
-            $params[] = "%$value%";
-            $types .= "s";
-            break;
-        case 'status':
-            $sql .= " WHERE status = ?";
-            $params[] = $value;
-            $types .= "s";
-            break;
-    }
-}
-
-$stmt = $conn->prepare($sql);
-
-if ($stmt === false) {
-    die('Prepare failed: ' . htmlspecialchars($conn->error));
-}
-
-if (!empty($params)) {
-    $stmt->bind_param($types, ...$params);
-}
-
-$stmt->execute();
-$result = $stmt->get_result();
-
-if ($result === false) {
-    $result = $conn->query("SELECT * FROM user_table");
-}
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" class="tab-logo" href="../../img/Logo_HowToDrum.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/admin_dashboard.css">
-    <link rel="icon" type="image/png" class="tab-logo" href="../img/Logo_HowToDrum.png">
-    <title>Manage User - HowToDrum</title>
+    <link rel="icon" type="image/png" class="tab-logo" href="../../img/Logo_HowToDrum.png">
+    <title>Admin - HowToDrum</title>
 </head>
 <body>
     <nav>
@@ -99,10 +29,6 @@ if ($result === false) {
             <a href="../">
                 <img src="../img/Logo_HowToDrum.png" alt="">
             </a>
-            <a href="#">Manage user</a>
-            <a href="./topic/">Manage topic</a>
-            <a href="./song_recommendation/">Manage song recommendation</a>
-            <a href="./exercise/">Manage exercise</a>
         </div>
         <div class="nav-right">
             <a href="../logout.php" class="btn-logout">Logout</a>
@@ -152,7 +78,7 @@ if ($result === false) {
                                 <td>{$row['status']}</td>
                                 <td>
                                     <a href='update.php?user_id={$row['user_id']}' class='btn-update'><i class='fa fa-edit'></i></a>    
-                                    <a href='#' class='btn-remove' onclick='ConfirmUserDeleteAlert({$row['user_id']})'><i class='fa fa-remove'></i></a>
+                                    <a href='#' class='btn-remove' onclick='ConfirmAlert({$row['user_id']})'><i class='fa fa-remove'></i></a>
                                 </td>
                             </tr>";
                         }

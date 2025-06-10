@@ -22,7 +22,7 @@
 
     <main>
         <form action="#" method="POST">
-            <h1>Create Data</h1>
+            <h1>Create User</h1>
             <label for="username">Username (Below 20 characters)</label><br>
             <input type="text" id="username" name="username"><br><br>
             <label for="email">Email</label><br>

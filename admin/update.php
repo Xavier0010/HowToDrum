@@ -33,7 +33,7 @@
         ?>
         
         <form action="" method="POST">
-            <h1>Update Data</h1>
+            <h1>Update User</h1>
             <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" value="<?php echo $row['username']; ?>"><br><br>
@@ -72,27 +72,4 @@
         ?>
     </main>
 </body>
-<style>
-    body {
-        margin: 0;
-    }
-
-    ::-webkit-scrollbar {
-        display: none;
-    }
-
-    .title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 25px;
-        background-color: #ffdbb5;
-        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.25);
-    }
-
-    .btn-logout {
-        text-decoration: none;
-        color: #000;
-    }
-</style>
 </html>
