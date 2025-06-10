@@ -1,0 +1,165 @@
+/** Nunito **/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/** Bebas Neue **/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    transition: top 0.8s ease;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.nav-logo img {
+    height: 2.5rem;
+    margin-left: 0.7rem;     
+}
+
+.nav-right {
+    gap: 1.2rem;
+    margin: 0 1rem;
+}
+
+.nav-right a {
+    color: #000;
+    text-decoration: none;
+    font-family: 'Nunito';
+    padding: 3px 0;
+}
+
+.nav-right .login-signup {
+    border-bottom: solid 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s linear;
+}
+
+.nav-right .login-signup:hover {
+    border-bottom: solid 2px rgba(0, 0, 0, 1);
+}
+
+.nav-user img {
+    height: 2rem;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: all .15s linear;
+}
+
+.nav-user img:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/exercise-header.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.header-text h1 {
+    font-family: 'Bebas Neue';
+    font-size: 6rem;
+    margin: 0;
+}
+
+main {
+    font-family: 'Nunito';
+    font-size: 0.9rem;
+    margin: 3rem 0;
+}
+
+h3 {
+    font-family: 'Nunito';
+    font-size: 1.2rem;
+}
+
+p {
+    font-family: 'Nunito';
+    font-size: 1.1rem;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    margin: 3rem;
+}   
+
+.card {
+    flex: 1 1 45%;
+    height: fit-content;
+    box-shadow: 0 0 20px 4px rgba(0,0,0,0.15);
+    border-radius: 0.7rem;
+    text-align: center;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.exercise-card ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding: 0;
+    gap: 10px;
+    margin: 15px;
+}
+
+.exercise-card ul li {
+    padding: 10px;
+    font-size: 0.75rem;
+    border-radius: 2rem;
+    background-color: lightgray;
+}
+
+.exercise-card img {
+    margin: 15px 0;
+    border-radius: 1rem;
+    height: 100px;
+}
+
+.home-page-redirect {
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Nunito';
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 2.5rem;
+    border: none;
+    border-radius: 0.7rem;
+}

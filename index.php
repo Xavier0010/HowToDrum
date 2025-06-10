@@ -352,7 +352,7 @@
             </div>
         </section>
 
-        <a href="#" class="exercise-page-redirect">Practice & Excercise >></a>
+        <a href="./exercise/" class="exercise-page-redirect">Practice & Excercise >></a>
 
         <div class="topic-description-overlay">
             <div class="overlay-content">
