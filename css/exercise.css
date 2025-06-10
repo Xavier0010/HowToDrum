@@ -163,3 +163,32 @@ p {
     border: none;
     border-radius: 0.7rem;
 }
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    background-color: #666666; 
+}
+
+.footer-logo a {
+    display: flex;
+    align-items: center;
+    margin: 0 7px;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    color: #000;
+    gap: 10px;
+}
+
+.footer-logo a img {
+    width: 40px;
+}
+
+footer hr {
+    width: 20%;
+    border-color: black;
+}

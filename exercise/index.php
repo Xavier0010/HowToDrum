@@ -73,6 +73,19 @@ include('../db.php');
         </div>
         <a href="../" class="home-page-redirect">Cheatsheet >></a>
     </main>
+    <footer>
+        <div class="footer-logo">
+            <a href="./">
+                <img src="../img/Logo_HowToDrum.png" alt="Logo">
+                <h3>HowToDrum</h3>
+            </a>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <p style="font-size: 1.2rem;"><i>A Drum Cheatsheet.</i></p>
+            <p style="font-size: 0.8rem">Copyright &#169 2024 HowToDrum</p>
+        </div>
+    </footer>
     <script src="../js/exercise.js "></script>
 </body>
 </html>

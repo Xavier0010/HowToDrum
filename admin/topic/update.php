@@ -33,7 +33,7 @@
         ?>
         
         <form action="" method="POST">
-            <h1>Create Topic</h1>
+            <h1>Update Topic</h1>
             <label for="title">Title</label><br>
             <input type="text" id="title" name="title" value="<?php echo $row['title']; ?>"><br><br>
             <label for="description">Description</label><br>

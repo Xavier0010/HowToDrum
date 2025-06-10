@@ -95,9 +95,9 @@ if ($result === false) {
                 <img src="../../img/Logo_HowToDrum.png" alt="">
             </a>
             <a href="../">Manage user</a>
-            <a href="./topic/">Manage topic</a>
+            <a href="./">Manage topic</a>
             <a href="./song_recommendation/">Manage song recommendation</a>
-            <a href="./exercise/">Manage exercise</a>
+            <a href="../exercise/">Manage exercise</a>
         </div>
         <div class="nav-right">
             <a href="../../logout.php" class="btn-logout">Logout</a>
