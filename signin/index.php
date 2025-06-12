@@ -68,34 +68,43 @@
     <title>Sign In - HowToDrum</title>
 </head>
 <body>
-    <form method="POST" autocomplete="off">
-        <h1>Sign In</h1>
-        <h4>Sign in to your account to continue</h4>
-        <table>
-            <tr>
-                <td>
-                    <label>Email or Username</label>
-                    <input type="text" name="login_input" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Password</label>
-                    <div class="password-field">
-                        <input type="password" class="password" name="password" required>
-                        <i class="show fa fa-eye"></i>
-                        <i class="hide fa fa-eye-slash"></i>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button type="submit">Sign In</button>
-                </td>
-            </tr>
-        </table>
-        <p class="sign-in-text">Don't have an account? <a href="../signup/">Sign Up</a></p>
-    </form>
+    <nav id="navbar">
+        <div class="nav-left logo-and-items">
+            <a href="../" class="nav-logo">
+                <img src="../img/Logo_HowToDrum.png" alt="Logo">
+            </a>
+        </div>
+    </nav>
+    <div class="signin-form">
+        <form method="POST" autocomplete="off">
+            <h1>Sign In</h1>
+            <h4>Sign in to your account to continue</h4>
+            <table>
+                <tr>
+                    <td>
+                        <label>Email or Username</label>
+                        <input type="text" name="login_input" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Password</label>
+                        <div class="password-field">
+                            <input type="password" class="password" name="password" required>
+                            <i class="show fa fa-eye"></i>
+                            <i class="hide fa fa-eye-slash"></i>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">Sign In</button>
+                    </td>
+                </tr>
+            </table>
+            <p class="sign-in-text">Don't have an account? <a href="../signup/">Sign Up</a></p>
+        </form>
+    </div>
 
     <script src="../js/signin-signup.js"></script>
     <script src="../js/alerts.js"></script>
