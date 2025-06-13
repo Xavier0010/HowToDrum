@@ -91,6 +91,28 @@ if ($userResult->num_rows === 0) {
         }
         ?>
         </div>
+        
+        <div class="flex-row">
+            <div class="card quiz-card quiz1">
+                <?php
+                
+                $query = "SELECT * FROM quiz_table";
+                $result = mysqli_query($conn, $query);
+                $row = mysqli_fetch_assoc($result); 
+                
+                ?>
+                <h2><?php echo $row['title']?></h2>
+                <p><?php echo $row['description']?></p>
+                <button class="open-overlay" data-quiz="1">Start!</button>
+            </div>
+        </div>
+
+        <div class="quiz-overlay">
+            <div class="overlay-content">
+                <p id="quiz-content"></p>
+            </div>
+        </div>
+
         <a href="../" class="home-page-redirect">Cheatsheet >></a>
     </main>
     <footer>
@@ -106,6 +128,6 @@ if ($userResult->num_rows === 0) {
             <p style="font-size: 0.8rem">Copyright &#169 2024 HowToDrum</p>
         </div>
     </footer>
-    <script src="../js/exercise.js "></script>
+    <script src="../js/exercise.js"></script>
 </body>
 </html>

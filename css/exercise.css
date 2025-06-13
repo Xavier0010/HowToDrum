@@ -148,6 +148,128 @@ p {
     height: 100px;
 }
 
+.quiz-card button {
+    border: none;
+    border-radius: 3rem;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 30px;
+    font-family: Nunito;
+    font-size: 1.1rem;
+    margin: 17px 0;
+    cursor: pointer;
+}
+
+.quiz-overlay {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 999;
+}
+
+.quiz-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+    overflow: hidden;
+}
+
+.overlay-content {
+    height: 80vh;
+    width: 90vw;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 0.7rem;
+    text-align: center;
+    transform: scale(0.95);
+    transition: transform .3s ease;
+}
+
+.quiz-overlay.visible .overlay-content {
+    transform: scale(1);
+}
+
+#options button {
+    flex: 1;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+#options button:hover {
+    background-color: #e6e6e6;
+    border-color: #999;
+}
+
+#options button.correct {
+    background-color: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+#options button.wrong {
+    background-color: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* Next Button */
+#nextBtn {
+    padding: 10px 25px;
+    font-size: 1rem;
+    background-color: #fff;
+    border: 2px solid #000;
+    color: #000;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    transition: all .2s ease;
+}
+
+#nextBtn:disabled {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    cursor: not-allowed;
+    opacity: 0.3;
+}
+
+#nextBtn:hover:enabled {
+    background-color: #000;
+    color: #fff;
+}
+
+.close-overlay {
+    padding: 10px 25px;
+    font-size: 1rem;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
 .home-page-redirect {
     display: flex;
     padding: 10px 0;
